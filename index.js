@@ -6,7 +6,7 @@ function rotateEmployeesEqually(desksCount, employeesCount) {
   }
 
   // Calculate the total number of shifts over 52 weeks
-  let totalShifts = 5 * 7 * desksCount;
+  let totalShifts = 5 * 52 * desksCount;
 
   // Calculate the number of shifts each employee gets
   let shiftsPerEmployee = Math.floor(totalShifts / employeesCount);
@@ -29,7 +29,7 @@ function rotateEmployeesEqually(desksCount, employeesCount) {
 
 
   // Rotate employees for 52 weeks
-  for (let week = 1; week <= 7; week++) {
+  for (let week = 1; week <= 52; week++) {
       console.log("Week " + week + ":");
 
       // Assign employees to desks for the current week
@@ -72,7 +72,7 @@ function rotateEmployeesEqually(desksCount, employeesCount) {
 
 // Parameters of desks and employees
 let desksCount = 10;
-let employeesCount = 20;
+let employeesCount = 200;
 
 // Rotate employees equally for 52 weeks
 rotateEmployeesEqually(desksCount, employeesCount);
